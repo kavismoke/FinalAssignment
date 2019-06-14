@@ -1,0 +1,12 @@
+{
+  "name": "youtubevideo-js",
+  "version": "1.1.4",
+  "ignore": [
+    "node_modules",
+    "demo/libs"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jQuery-ajaxTransport-XDomainRequest": "jquery-ajaxtransport-xdomainrequest#^1.0.4"
+  }
+}

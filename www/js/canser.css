@@ -1,0 +1,222 @@
+p{
+	font-size:13px;
+	text-decoration:none;
+}
+
+h1{
+	text-shadow:none;
+	background-color:#ff1a8c;
+	opacity:0.8;
+}
+#nav-panel{
+	background-color:#808080;
+	opacity:0.9;
+}
+
+#panel-fixed-page1{
+	background-image: url("../image/58c080b7566550e77093e9fde92dc7c6.jpg");
+	background-attachment:fixed;
+	background-size: 500px 670px;
+	overflow-y: hidden;
+}
+#VISIT{
+	width:400px;
+	height:15px;
+	background-color:transparent;
+	color:white;
+	font-weight:normal;
+	font-family: Arial;
+	letter-spacing:3px;
+}
+.txt_breast{
+	color:white;
+	font-weight:normal;
+	font-size:50px;
+	font-family: Arial;
+	letter-spacing:3px;
+}
+.CANCER{
+	color:white;
+	font-weight:normal;
+	font-family: Arial;
+	font-size:15px;
+	letter-spacing:1px;
+}
+.logo{
+	width:300px;
+	height:300px;
+}
+#login{
+	background-color:transparent;
+	color:white;
+	font-weight:normal;
+	font-family: Arial;
+	letter-spacing:3px;
+	height:10px;
+	width:150px;
+	left:15px;
+	border-left-style:hidden;
+	border-right-style:hidden;
+	border-top-style:hidden;
+
+}
+#member{
+	background-color:transparent;
+	color:white;
+	font-weight:normal;
+	font-family: Arial;
+	letter-spacing:3px;
+	height:10px;
+	width:150px;
+	top:-35px;
+	left:265px;
+	border-left-style:hidden;
+	border-right-style:hidden;
+	border-top-style:hidden;
+		
+}
+#homepage{
+	background-image: url("../image/9c61d86033251a9d73b0d8b84b3e7da6.jpg");
+	overflow: hidden;
+	background-attachment:fixed;
+	background-size: 500px 670px;
+
+}
+
+#list{
+	opacity:0.8;
+	color:black;
+	text-decoration:none;
+	font-weight:bold;
+}
+.bse{
+	width:300px;
+	height:300px;
+}
+#selfexam{
+	background-color:#808080 ;
+	background-attachment:fixed;
+	background-size: 490px 700px;
+	text-decoration:none;
+	color:white;
+}
+#video{
+	background-color:grey;
+	background-attachment:fixed;
+	background-size: 490px 700px;
+	text-decoration:none;
+	color:white;
+}
+.para{
+	color:black;
+	background-color:white;
+	opacity:0.7;
+	padding:15px;
+}
+#slidepan{
+	background-color:transparent;
+	color:white;
+	font-weight:normal;
+	font-family: Arial;
+	letter-spacing:1px;
+	font-size:15px;
+}
+
+/* -------------------------------------------------------------------------------------------------------Reminder CSS */
+
+
+.mock-dialog {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-column-gap: 1rem;
+}
+
+#preview-area {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+}
+#preview-area.show {
+  height: auto;
+  transition: height .35s ease;
+}
+
+.__fade-in {
+    animation: animate-fade-in ease-in 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards; /*when the spec is finished*/
+  }
+  
+  @keyframes animate-fade-in {
+    0% {
+      opacity:0;
+      visibility: hidden;
+    }
+    100% {
+      opacity:1;
+      visibility: visible;
+    }
+  }
+  /* -------------------------------------------------------------------------------------------------------Reminder CSS */
+  
+
+.player {
+    width: 500px;
+    height: 300px;
+    border: 2px groove gray;
+    background: #ccc;
+    text-align: center;
+    line-height: 300px;
+    margin: auto;
+  }
+  .ui-tooltip {
+    border: 1px solid white;
+    background: #111;
+    color: white;
+  }
+  .ui-menu {
+    position: absolute;
+  }
+  .set {
+    display: inline-block;
+  }
+  .notification {
+    position: absolute;
+    display: inline-block;  
+    font-size: 2em;
+    padding: .5em;
+    box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.5);
+  }
+  /* -------------------------------------------------------------------------------------------------------timer CSS */
+
+#timerLabel{
+   position: relative;
+ 
+  top:240px;
+  font-size: 100px;
+  margin-top: -140px;
+  
+  
+}
+
+#timerNameLabel{
+  position: relative;
+    top:130px;
+    font-size: 50px;
+   color: #3370d4;
+    margin-top: -65px;
+}
+
+#sessionCircle{
+ 
+}
+
+#sessionCounterTbl{
+  margin-top: 25px;
+  font-size: 14px;
+}

@@ -1,0 +1,1706 @@
+<!Doctype html>
+<html>
+<head>
+	<title> Welcome to the breast cancer application.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../www/js/jquery.mobile-1.4.5.css">
+	<link rel="stylesheet" href="../www/js/canser.css">
+	<link rel="stylesheet" href="../www/leaflet/leaflet.css"/>
+	<script src="../www/leaflet/leaflet.js"></script>
+	<link rel="stylesheet" href="../www/css/demo.css">
+	<link rel="stylesheet" href="../www/css/jquery.youtubevideo.css">
+	<script src="../www/js/Reminder.js"></script>
+	<script src="../www/js/Videos.js"></script>
+	<script src="../www/js/timer.js"></script>
+	<script src="../www/js/jquery.js"></script>
+	<script src="../www/js/jquery.mobile-1.4.5.js"></script>
+	<script src="../www/popup-iframe-video.js" id="video-script"></script>
+	<script src="cordova.js"></script>
+</head>
+
+<body>
+<!----------------------------------------------------------------------------------------------------- WELCOME PAGE -->
+<div data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="Welcome Page"> 
+ 
+    <div role="main" class="ui-content jqm-content jqm-fullwidth">
+	<center>
+		<h2 class="txt_breast">Breast Cancer</h2>
+		<img class="logo" src="image/pink-breast-cancer-ribbon-png-4.png">
+		<p class="CANCER">CANCER is only going to be a CHAPTER in your life not the whole STORY.</p>
+		<div><a href="#homepage"  class="ui-btn ui-mini" id="VISIT" >Visit App</a></div>
+	</center>
+		<div><a href="#loginpage"  class="ui-btn ui-mini" data-transition="pop" id="login" >Log In</a></div>
+		<div><a href="#add-form"  class="ui-btn ui-mini" data-transition="pop" id="member" >Be a member</a></div>
+	</div>
+
+</div>
+<!----------------------------------------------------------------------------------------------------- LOGIN PAGE -->
+<div data-role="page" id="loginpage" data-theme="a">
+	<div data-role="header">
+		<h1><a class="ui-icon-delete ui-btn-icon-right" data-rel="back"></a> Log In</h1>
+	</div>		
+<div data-role="main" class="ui-content">
+
+<form>
+	<input type="text" name="username" id="uname"  placeholder="Enter your Username." data-clear-btn="true" data-mini="true">
+			
+    <input type="text" name="Password" id="pass"  placeholder="Enter your Password." data-clear-btn="true" data-mini="true">
+</form>
+		<center>
+			<div><a href="#homepage"  class="ui-btn ui-mini" id="VISIT">Log In</a></div>
+		</center>	
+	</div>
+</div>
+
+<!-----------------------------------------------------------------------------------------------------HOME PAGE -->
+<div data-role="page" class="jqm-demos" id="homepage" data-title="Panel fixed positioning">
+
+    <div data-role="header" data-position="fixed">
+        <h2>Breast Cancer App</h2>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+    </div><!-- /header -->
+
+	<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+		<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+				
+		</ul>
+	 </div>
+	 
+    <div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<center><h1 class="TXT">Breast Cancer</h1></center>
+		<center><p>Know more about breast cancer.</p></center>
+		
+		<ul data-role="listview" data-split-icon="plus" data-inset="true">
+		
+			<li><a href="#whatisbreatcancer">
+			<img src="image/4.png">
+			<h2>What is breast Cancer?</h2>
+			<p>Know more about breast cancer.</p></a>
+			</li>
+			
+			<li><a href="#stages">
+			<img src="image/33.png">
+			<h2>What is are the stages of breast cancer?</h2>
+			<p>Different stages of breast cancer.</p></a>
+			</li>
+			
+			<li><a href="#risk">
+			<img src="image/44.png">
+			<h2>What are the risk factors? </h2>
+			<p>What are the risks for having breast cancer?</p></a>
+			</li>
+			
+			<li><a href="#treatment">
+			<img src="image/22.png">
+			<h2>What are the treatments? </h2>
+			<p>Treatment options based on type of breast cancer.</p></a>
+			</li>
+			
+			<li><a href="#prevention">
+			<img src="image/222.png">
+			<h2>Prevention </h2>
+			<p>Prevention is better than cure.</p></a>
+			</li>
+						
+		</ul>
+	</div>
+		
+	<!-- /footer -->	
+		<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div>
+	
+</div>
+<!------------------------------------What is breast Cancer----------------------------------------------------------------- ? -->
+<div data-role="page" class="jqm-demos" id="whatisbreatcancer" data-title="Panel fixed positioning">
+
+    <div data-role="header" data-position="fixed">
+        <h2>Breast cancer</h2>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back">back</a>
+    </div><!-- /header -->
+
+	<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+		<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+				
+		</ul>
+	 </div>
+	 
+    <div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<center><h1>What is breast Cancer? </h1></center>
+		<center><p>Breast cancer is a disease in which cells in the breast grow out of control. 
+		There are different kinds of breast cancer.<img src="image/1.jpg" align="right" width="200" height="250"> 
+		The kind of breast cancer depends on which cells in the breast turn into cancer.<br><br>
+
+		Breast cancer can begin in different parts of the breast. 
+		A breast is made up of three main parts: lobules, ducts, and connective tissue. 
+		The lobules are the glands that produce milk. The ducts are tubes that carry milk to the nipple. 
+		<br><br>The connective tissue (which consists of fibrous and fatty tissue) surrounds and holds everything together. 
+		Most breast cancers begin in the ducts or lobules.
+
+		 <img src="image/2.jpg" align="right" width="200" height="250"> 
+		 <br><br>Breast cancer can spread outside the breast through blood vessels and lymph vessels. 
+		 When breast cancer spreads to other parts of the body, it is said to have metastasized.</p></center>		
+		
+	</div>
+		
+	<!-- /footer -->	
+		<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div>
+	
+</div>
+<!----------------------------------------------------------------------------------------------------- stages of breast cancer -->
+<div data-role="page" class="jqm-demos" id="stages" data-title="Panel fixed positioning">
+
+    <div data-role="header" data-position="fixed">
+        <h2>Stages</h2>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back">back</a>
+    </div><!-- /header -->
+
+	<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+		<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+				
+		</ul>
+	 </div>
+
+<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<center><h1>What are the stages of breast cancer? </h1></center>
+		<img src="image/stages.jpg" height="250" width="100%">
+		<center><p>
+		<div align="left"><h2>What is stage I (stage 1) breast cancer?</h2>
+	This breast cancer is the earliest stage of invasive breast cancer. In stage I, the tumor measures up to 2 cm and no lymph nodes are involved. At this stage, the cancer cells have spread beyond the original location and into the surrounding breast tissue.
+
+	<br><br>Because a stage I tumor is small, it may be difficult to detect. However, breast self-exams and routine screening are always important and can often lead to early diagnosis, when the cancer is most treatable.
+
+	Stage I breast cancer is divided into two categories:
+
+	<br><br>Stage IA (Stage1A): The tumor measures 2 cm or smaller (about the size of a pea or shelled peanut) and has not spread outside the breast.
+
+	<br><br>Stage IB (Stage1B): Small clusters of cancer cells measuring no more than 2 mm, are found in the lymph nodes, and either there is no tumor inside the breast, or the tumor is small, measuring 2 cm or less.
+
+	The survival rate for stage IA breast cancer may be slightly higher than for stage IB. However, all women with stage I breast cancer are considered to have a good prognosis.
+	
+	At stage I, TNM designations help describe the extent of the disease. For example, there may or may not be cancer cells in the lymph nodes, and the size of the tumor may range from 1 cm to 2 cm. Most commonly, stage I breast cancer is described as:
+	<ul type="circle">
+	<li> T: T1, T2, T3 or T4, depending on the size and/or extent of the primary tumor </li>
+	<li> N0: Usually, cancer has not spread to the lymph nodes. </li>
+	<li> M0: The disease has not spread to other sites in the body. </li>
+	</ul>
+	</p> 
+	</div>
+	
+	<div align="left"><h2>What is stage II (stage 2) breast cancer?</h2>
+	<p>
+		Also known as invasive breast cancer, the tumor in this stage measures between 2 cm to 5 cm, or the cancer has spread to the lymph nodes under the arm on the same side as the breast cancer. Stage II breast cancer indicates a slightly more advanced form of the disease. At this stage, the cancer cells have spread beyond the original location and into the surrounding breast tissue, and the tumor is larger than in stage I disease. However, stage II means the cancer has not spread to a distant part of the body.
+
+		At stage II, a tumor may be detected during a breast self-exam as a hard lump within the breast. Breast self-exams and routine screening are always important and can often lead to early diagnosis, when the cancer is most treatable.
+
+		Stage II breast cancer is divided into two categories:
+		
+		<br><br>
+		<u> Stage IIA (Stage 2A): One of the following is true: </u>
+		<ul type="circle">
+		<li>There is no tumor within the breast, but cancer has spread to the axillary (underarm) lymph nodes, or </li>
+		<li>The tumor in the breast is 2 cm or smaller and cancer has spread to the axillary lymph nodes, or </li>
+		<li>The tumor in the breast measures 2 cm to 5 cm but cancer has not spread to the axillary lymph nodes.</li>
+		</ul>
+		
+		Stage IIB (Stage 2B): One of the following is true:
+
+		
+	
+		<br><br>The tumor measures 2 cm to 5 cm and cancer has spread to the axillary lymph nodes, or
+		The tumor is larger than 5 cm but cancer has not spread to the axillary lymph nodes.
+		The survival rate for stage IIA breast cancer may be slightly higher than for stage IIB. However, all women with stage II breast cancer are considered to have a good prognosis.
+
+		At stage II, TNM designations help describe the extent of the disease. Most commonly, stage II breast cancer is described as:
+
+		T: T1, T2, T3 or T4, depending on the size and/or extent of the primary tumor
+		N1: Cancer has spread to the lymph nodes.
+		M0: The disease has not spread to other sites in the body.
+		</p>
+	
+	
+	
+	
+	
+	<div align="left"><h2>What is stage III (stage 3) breast cancer?</h2>
+	<p>
+			Also known as locally advanced breast cancer, the tumor in this stage of breast cancer is more than 2 
+			inches in diameter across and the cancer is extensive in the underarm lymph nodes or has spread to other 
+			lymph nodes or tissues near the breast. <br><br>Stage III breast cancer is a more advanced form of invasive breast cancer.
+			At this stage, the cancer cells have usually not spread to more distant sites in the body, but they are 
+			present in several axillary (underarm) lymph nodes. The tumor may also be quite large at this stage, possibly 
+			extending to the chest wall or the skin of the breast.
+
+		<br><br>Stage III breast cancer is divided into three categories:
+		<br><br>
+		Stage IIIA (Stage 3A): One of the following is true:
+		<br>
+		No tumor is found in the breast, but cancer is present in axillary lymph nodes that are attached to either other or other structures, or cancer may be found in the lymph nodes near the breast bone, or
+		The tumor is 2 cm or smaller. Cancer has spread to axillary lymph nodes that are attached to each other or other structures, or cancer may have spread to lymph nodes near the breastbone, or
+		The tumor is 2 cm to 4 cm in size. Cancer has spread to axillary lymph nodes that are attached to each other or to other structures, or cancer may have spread to lymph nodes near the breast bone, or
+		The tumor is larger than 5 cm. Cancer has spread to axillary lymph nodes that may be attached to each other or to other structures, or cancer may have spread to lymph nodes near the breastbone.
+		<br><br>
+		Stage IIIB (Stage 3B): The tumor may be any size, and the cancer:
+		<br>
+		Has spread to the chest wall and/or skin of the breast, and
+		May have spread to axillary lymph nodes that may be attached to each other or to other structures, or cancer may have spread to lymph nodes near the breastbone.
+		Cancer that has spread to the skin of the breast is inflammatory breast cancer.
+		<br><br>
+		Stage IIIC (Stage 3C):
+		<br>
+		There may be no sign of cancer in the breast or the tumor may be any size and may have spread to the chest wall and/or skin of the breast.
+		Cancer cells are present in lymph nodes above or below the collarbone.
+		Cancer cells may have spread to axillary lymph nodes or lymph nodes near the breastbone.
+		Cancer that has spread to the skin of the breast is inflammatory breast cancer.
+		Stage IIIC breast cancer may be operable or inoperable:
+
+		Operable stage IIIC: The cancer is found in 10 or more axillary lymph nodes, or is in lymph nodes below the collarbone, or is in axillary lymph nodes and lymph nodes near the breastbone.
+		Inoperable stage IIIC: The cancer has spread to the lymph nodes above the collarbone.
+		The survival rate for stage IIIA breast cancer may be slightly higher than for stage 3B, and the survival rate for stage IIIB may be slightly higher than for stage IIIC. However, all women diagnosed with stage III breast cancer have several promising treatment options.
+		<br>
+		At stage III, TNM designations help describe the extent of the disease. Higher numbers indicate more extensive disease. Most commonly, stage III breast cancer is described as:
+	<br>
+		<ul type="circle">
+		<li>T: T1, T2, T3 or T4, depending on the size and/or extent of the primary tumor</li>
+		<li>N1: Cancer has spread to the lymph nodes.</li>
+		<li>M0: The disease has not spread to other sites in the body.</li><br><br>
+
+		
+		
+	<div align="left"><h2>What is stage IV (stage 4) breast cancer?</h2>
+	<p>
+	Also known as metastatic breast cancer, the cancer in this stage has spread beyond the breast, underarm and internal mammary lymph nodes to other parts of the body near to or distant from the breast. The cancer has spread elsewhere in the body. The affected areas may include the bones, brain, lungs or liver and more than one part of the body may be involved.
+	<br>
+	At stage IV, TNM designations help describe the extent of the disease. Higher numbers indicate more extensive disease. Most commonly, stage IV breast cancer is described as:
+	<ul type="circle">
+	<li>T: T1, T2, T3 or T4, depending on the size and/or extent of the primary tumor.</li>
+	<li>N1: Cancer has spread to the lymph nodes</li>
+	<li>M1: The disease has spread to other sites in the body</li>
+	
+	</p>
+	</div>
+	
+	
+	</div>
+	
+	
+	</div>
+		
+	<!-- /footer -->	
+		<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div>
+	</div>
+	</div>
+<!------------------------------------What are the risk factors? ----------------------------------------------------------------- ?-->
+<div data-role="page" class="jqm-demos" id="risk" data-title="Panel fixed positioning">
+
+    <div data-role="header" data-position="fixed">
+        <h2>Risk factors</h2>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back">back</a>
+    </div><!-- /header -->
+
+	<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+		<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+				
+		</ul>
+	 </div>
+	 
+    <div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<center><h1>What Are the Risk Factors for Breast Cancer?</h1></center>
+		
+		<p> 
+		Studies have shown that your risk for breast cancer is due to a combination of factors. 
+		The main factors that influence your risk include being a woman and getting older. Most breast cancers are found in women who are 50 years old or older.
+		</p>
+		<p>
+		Some women will get breast cancer even without any other risk factors that they know of. Having a risk factor does not mean you will get the disease, and not all risk factors have the same effect.
+		Most women have some risk factors, but most women do not get breast cancer. 
+		If you have breast cancer risk factors, talk with your doctor about ways you can lower your risk and about screening for breast cancer.
+		</p>
+		
+		<h2> Risk Factors You Cannot Change </h2>
+		<p>
+		<ul type="circle">
+		<li>Getting older: The risk for breast cancer increases with age; most breast cancers are diagnosed after age 50.</li>
+		<li>Genetic mutations. Inherited changes (mutations) to certain genes, such as BRCA1 and BRCA2.</li> 
+		<li>Women who have inherited these genetic changes are at higher risk of breast and ovarian cancer.</li>
+		<li>Reproductive history: Early menstrual periods before age 12 and starting menopause after age 55 expose women to hormones longer, raising their risk of getting breast cancer.</li>
+		<li>Family history of breast cancer: A woman’s risk for breast cancer is higher if she has a mother, sister, or daughter (first-degree relative) or multiple family members on either her mother’s or father’s side of the family who have had breast cancer. Having a first-degree male relative with breast cancer also raises a woman’s risk.</li>
+		</ul>
+		</p>
+		
+		<h2> Risk Factors You Can Change </h2>
+		<ul type="circle">
+		<li>Not being physically active: Women who are not physically active have a higher risk of getting breast cancer.</li>
+		<li>Being overweight or obese after menopause: Older women who are overweight or obese have a higher risk of getting breast cancer than those at a normal weight.</li>
+		<li>Reproductive history: Having the first pregnancy after age 30, not breastfeeding, and never having a full-term pregnancy can raise breast cancer risk.</li>
+		</ul>
+	</div>
+		
+	<!-- /footer -->	
+		<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div>
+	
+</div>
+<!------------------------------------What are the treatments?----------------------------------------------------------------- ?-->
+<div data-role="page" class="jqm-demos" id="treatment" data-title="Panel fixed positioning">
+
+    <div data-role="header" data-position="fixed">
+        <h2>Treatments</h2>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back">back</a>
+    </div><!-- /header -->
+
+	<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+		<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+				
+		</ul>
+	 </div>
+	 
+    <div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<center><h1>What are the treatments for breast Cancer? </h1></center>
+		<img src="image/treatment.jpg" width="100%" height="250">
+		<div align="left">
+		<p> Some treatments remove or destroy the disease within the breast and nearby tissues, such as lymph nodes. These include: </p>
+		<br>
+		
+		<ul type="circle">
+		<li> <i>Surgery</i> to remove the whole breast, called a mastectomy, or to remove just the tumor and tissues around it, called a lumpectomy or breast-conserving surgery. 
+		There are different types of mastectomies and lumpectomies.</li>
+		<li> <i>Radiation</i> therapy, which uses high-energy waves to kill cancer cells. </li>
+		<li> <i>Chemotherapy</i> uses drugs to kill cancer cells. 
+		As these powerful medicines fight the disease, they also can cause side effects, like nausea, hair loss, early menopause, hot flashes, and fatigue. </li>
+		<li> <i>Hormone therapy</i> uses drugs to prevent hormones, especially estrogen, from fueling the growth of breast cancer cells. Medicines include tamoxifen (Nolvadex, Soltamox) for women before and after menopause and aromatase inhibitors including anastrozole (Arimidex), exemestane (Aromasin), and letrozole (Femara) for postmenopausal women. Side effects can include hot flashes and vaginal dryness. 
+		Some types of this therapy work by stopping the ovaries from making hormones, either through surgery or medication. Fulvestrant ( Faslodex)  is an injection that keeps estrogen from attaching to cancer cells. </li>
+		<li> <i>Targeted therapy</i> such as lapatinib (Tykerb), pertuzumab (Perjeta), and trastuzumab (Herceptin). 
+		These medicines prompt the body's immune system to destroy cancer. They target breast cancer cells that have high levels of a protein called HER2. Palbociclib (Ibrance) and ribociclib (Kisqali) work by blocking  a substance that promotes cancer growth. Along with an aromatase inhibitor, palbociclib and ribociclib are for postmenopausal women with certain types of advanced cancer.  Abemaciclib and palbociclib are sometimes used with the hormone therapy fulvestrant (Faslodex). A new class of drugs called PARP (poly ADP ribose polymerase) inhibitors targets an enzyme that feeds cancer cells. 
+		PARP inhibitors include talazoparib (Talzenna) and talazoparib (Talzenna). </li>
+		
+		</div>
+		
+	</div>
+		
+	<!-- /footer -->	
+		<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div>
+	
+</div>
+<!------------------------------------What are the preventions?----------------------------------------------->
+<div data-role="page" class="jqm-demos" id="prevention" data-title="Panel fixed positioning">
+
+    <div data-role="header" data-position="fixed">
+        <h2>Preventions</h2>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back">back</a>
+    </div>
+
+	<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+		<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+				
+		</ul>
+	 </div>
+	 
+    <div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<center><h1>What are the prevention for breast Cancer? </h1></center>
+		<center><img src="image/prevention.jpg" width="300" height="300"><center>
+		<div align="center">
+		<h2> 1. Keep Weight in Check</h2>
+		<p> It’s easy to tune out because it gets said so often, but maintaining a healthy weight is an important goal for everyone. 
+		Being overweight can increase the risk of many different cancers, including breast cancer, especially after menopause. </P>
+		<br> <br>
+		
+		<h2> 2. Be Physically Active</h2>
+		<p> Exercise is as close to a silver bullet for good health as there is, and women who are physically active for at least 30 minutes a day have a lower risk of breast cancer. 
+		Regular exercise is also one of the best ways to help keep weight in check.  </p>
+		<br> <br>
+		
+		<h2>3. Eat Your Fruits & Vegetables – and Avoid Too Much Alcohol</h2>
+		<p> A healthy diet can help lower the risk of breast cancer.  
+		Try to eat a lot of fruits and vegetables and keep alcohol at moderate levels or lower (a drink a day or under).  While moderate drinking can be good for the heart in older adults, even low levels of intake can increase the risk of breast cancer.  If you don’t drink, don’t feel you need to start. 
+		If you drink moderately, there’s likely no reason to stop. But, if you drink more, you should cut down or quit.  </P>
+		
+		<br> <br>
+		
+		<h2>4. Don’t Smoke</h2>
+		<p> Smokers and non-smokers alike know how unhealthy smoking is.  
+		On top of lowering quality of life and increasing the risk of heart disease, stroke, and at least 15 cancers – including breast cancer – it also causes smelly breath, bad teeth, and wrinkles. 
+		Now that’s motivation to stay smoke-free or work to get smoke-free. </P>
+		
+		
+	
+		</div>
+		
+	</div>
+		
+	<!-- /footer -->	
+		<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div>
+	
+</div>
+<!---------------------------------------------------------------------------------------------- Cancer preventing food -->	
+<div data-role="page" id="food" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2>Cancer Preventing Food</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" >Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back" >back</a>
+	</div>  
+	
+	<div data-role="main" class="ui-content">
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+		<center>
+			<p><h3>What’s the link between cancer and diet?</h3></p>
+		</center>
+		
+		<P>
+		Some cancer risk factors, such as genetics and environment, are out of your control, but research suggest that about 70% of your lifetime risk of cancer is within your power to change, including your diet. 
+		Avoiding cigarettes, limiting alcohol, reaching a healthy weight, and getting regular exercise are all great steps for preventing cancer. 
+		Adopting a healthy diet can also play a vital role.
+		</P>
+
+		<h2> <i>Add Garlic to Your Anti-Cancer Diet </i></h2>
+		<center><img src="image/garlic.jpg" width="350" height="150"></center>
+		<p>
+		Research shows that garlic is a cancer-fighting food. Several large studies have found that those who eat more garlic are less likely to develop various kinds of cancer, especially in digestive organs such as the esophagus, stomach, and colon. 
+		Ingredients in the pungent bulbs may keep cancer-causing substances in your body from working, or they may keep cancer cells from multiplying. 
+		Experts don’t know how much you need to eat to prevent cancer, but a clove a day may be helpful.
+		</P>
+		
+		<h2> <i>Berries Are Foods That Fight Cancer </i></h2>
+		<center><img src="image/berries.jpg" width="350" height="150"></center>
+		<p>
+		As a tasty treat and cancer-fighting food, berries are hard to beat. Berries contain particularly powerful antioxidants, 
+		meaning they can halt a naturally occurring process in the body that creates free radicals that can damage your cells. 
+		Compounds in berries may also help keep cancers from growing or spreading. So, as part of your anti-cancer diet, pick up a handful of blueberries, blackberries, 
+		strawberries, or whichever are your favorite from this large family of healing fruits.
+		</P>
+		
+		<h2> <i>Tomatoes May Protect Men From Prostate Cancer </i></h2>
+		<center><img src="image/tomato.jpg" width="350" height="150"></center>
+		<p>
+		Some research has found that tomatoes may help protect men from prostate cancer. 
+		The juicy red fruit can help guard the DNA in your cells from damage that can lead to cancer. 
+		Tomatoes contain a particularly high concentration of an effective antioxidant called lycopene. 
+		Your body may absorb lycopene better from processed tomato foods such as sauce, 
+		which means that whole-wheat pasta with marinara sauce could be a delicious way to get your dose of cancer-fighting foods. 
+		</P>
+		
+		<h2> <i>Add Leafy Green Vegetables to Your Anti-Cancer Diet</i></h2>
+		<center><img src="image/leaf.jpg" width="350" height="150"></center>
+		<p>
+		Leafy green vegetables like spinach and lettuce are good sources of the antioxidants beta-carotene and lutein. 
+		You’ll also find these nutrients in vegetables that are more traditionally eaten cooked, like collard greens, mustard greens,
+		and kale. According to the American Institute for Cancer Research, 
+		some lab studies have found that chemicals in these cancer-fighting foods may limit the growth of some kinds of cancer cells. 
+		</P>
+		
+		<h2> <i>Cancer-Fighting Beans May Reduce Your Cancer Risk</i></h2>
+		<center><img src="image/beans.jpg" width="350" height="150"></center>
+		<p>
+		Certain fruits and vegetables and other plant foods get plenty of recognition for being good sources of antioxidants, 
+		but beans often are unfairly left out of the picture. Some beans, particularly pinto and red kidney beans, 
+		are outstanding sources of antioxidants and should be included in your anti-cancer diet. Beans also contain fiber, 
+		which may also help reduce your risk of cancer, according to the American Cancer Society.
+		</P>
+		
+		<h2> <i>Grapes Prevent Cancer From Beginning or Spreading</i></h2>
+		<center><img src="image/grape.jpg" width="350" height="150"></center>
+		<p>
+		The skin of red grapes is a particularly rich source of an antioxidant called resveratrol. 
+		Grape juice and red wine also contain this antioxidant. 
+		According to the National Cancer Institute, 
+		resveratrol may be useful in keeping cancer from beginning or spreading. Lab studies have found that it limits the growth of many kinds of cancer cells.
+		</P>
+		
+		</div>
+			<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div>
+	</div>
+<!----------------------------------------------------------------------------------------------------- SELF EXAMINATION -->
+<div data-role="page" id="selfexam" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2> Breast Self Examination</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#video" data-icon="video" data-iconpos="notext" data-transition="pop">Video</a>
+	</div>  
+	
+
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+		
+	<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<center><p><h1 class="TXT"> Breast Self Examination</h1></p></center>
+		<p>A breast self-examination (BSE) is a technique which allows an individual to examine his/her breast tissue for any physical or visual changes. 
+			It is often used as an early detection method for breast cancer.</p>
+			
+		<p><h3>How To Do A Breast Self-Exam Part 1: TOUCH</h3></p>
+		<p><h4>Step 1.</h4></p>
+		<center><img class="bse" src="image/bse_1.jpg"></center>
+		<p class="para">Check the OUTER HALF of your right breast. Lie down and roll on to your left side to examine your right breast. 
+			Place your right hand, palm up on your forehead. Your breast should lie as flat on your chest as possible. 
+			It may be easier and more comfortable if you put a pillow behind your shoulder or back.</p>
+			
+		<p><h4>Step 2.</h4></p>
+		<center><img class="bse" src="image/bse_2.jpg"></center>
+		<p class="para">Using the flat pads of your three middle fingers—not the tips—move the pads of your fingers in little circles, 
+			about the size of a dime. For each little circle, change the amount of pressure so you can feel ALL levels of your breast tissue. 
+			Make each circle three times—once light, once medium, and once deep—before you move on to the next area.</p>
+			
+		<p><h4>Step 3.</h4></p>
+		<center><img class="bse" src="image/bse_3.jpg"></center>
+		<p class="para">Start the circles in your armpit and move down to just below the bra line. 
+			Then slide your fingers over—just the width of one finger and move up again. 
+			Don’t lift your fingers from your breast as you move them to make sure you feel the entire area. 
+			Continue this up-and-down vertical strip pattern—from your collarbone to just below your bra line—until you reach the nipple.</p>
+
+		<p><h4>Step 4.</h4></p>
+		<center><img class="bse" src="image/bse_4.jpg"></center>
+		<p class="para">Check the INNER HALF of your right breast. 
+			When you reach the nipple, remove pillow and roll on to your back, remove your hand from your forehead and place this arm at a right angle (see drawing). 
+			Carefully check the nipple area using the same circular pressures as before, without squeezing. Then examine the remaining breast tissue using 
+			the up-and-down vertical strip pattern, until you reach the middle of your chest. Place your non-palpating hand down at your side, make a row of circles above and below your collarbone, 
+			working from your shoulder to your mid-line.<br>-Roll on to your right side and repeat these steps on your left breast, using your right hand.</p>
+			
+		<p><h3>How To Do A Breast Self-Exam Part 2: LOOK</h3></p>
+		<p>Stand in front of a mirror and look closely at your breasts in the following three positions, 
+		viewing from the right and left as well as facing forward. Check for changes in the following:</p>
+			<ul>
+				<li><h4>Shape:</h4> Compare one to the other. One breast may normally be larger than the other, but sudden changes in size should not occur.</li>
+				<li><h4>Skin:</h4> Check for rash, redness, puckering, dimpling, or orange-peel-textured appearance.</li>
+				<li><h4>Nipples:</h4> Check for any physical changes such as a sudden inversion, scaliness, redness, itching, swelling, or discharge.</li>
+				<li><h4>Vein patterns:</h4> Look for a noticeable increase in size or number of veins compared to the other breast.</li>
+			</ul>
+			
+		<p><h4>Step 1.</h4></p>
+		<center><img class="bse" src="image/bse_5.jpg"></center>
+		<center><p>Arms at your sides.</p></center>	
+
+		<p><h4>Step 2.</h4></p>
+		<center><img class="bse" src="image/bse_6.jpg"></center>
+		<center><p>Arms raised above your head bending forward.</p></center>
+		
+		<p><h4>Step 3.</h4></p>
+		<center><img class="bse" src="image/bse_7.jpg"></center>
+		<center><p>Place hands on your hips and hunch over.</p></center>
+
+		<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div> 
+	</div>
+</div>
+
+<!----------------------------------------------------------------------------------------------------- VIDEO PAGE -->
+<div data-role="page" id="video" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2> Videos for BSE</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" >Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back">back</a>
+	</div>  
+	
+
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+		<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<script type="text/javascript"
+		src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+		<div class="jquery-script-clear"></div>
+		
+			<div class="youtube-video-container">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-sm-8 col-sm-push-2">
+
+							<div class="row">
+								<!-- <div class="col-md-6">
+									<div class="demo-adaptive" data-ytb-video="LLWiR9Ki8oDHZKt3TgfhJ-pw" data-ytb-options="{
+										type: 'playlist'
+									}"></div>
+								</div> -->
+								<div class="col-md-6">
+									<div class="demo-adaptive" data-ytb-video="r7lH48mbd50"></div>
+								</div>
+								<div class="col-md-6">
+									<div class="demo-adaptive" data-ytb-video="nkPR4ar1EQ4"></div>
+								</div>
+								<div class="col-md-4">
+									<div class="demo-adaptive" data-ytb-video="Z41j2BDapg4"></div>
+								</div>
+								<div class="col-md-4">
+									<div class="demo-adaptive" data-ytb-video="clOEgvgUxfk"></div>
+								</div>
+								<div class="col-md-4">
+									<div class="demo-adaptive" data-ytb-video="biTZmXL0Nu8"></div>
+								</div>
+								<div class="col-md-4">
+									<div class="demo-adaptive" data-ytb-video="yTHyMNBkbOY"></div>
+								</div>
+								<div class="col-md-8">
+									<div class="demo-adaptive" data-ytb-video="zQTw_PVzdOQ"></div>
+								</div>
+								<div class="col-md-8">
+									<div class="demo-adaptive" data-ytb-video="dY8Tg4fkt7c"></div>
+								</div>
+								<div class="col-md-8">
+									<div class="demo-adaptive" data-ytb-video="mYTZt7WWeXs"></div>
+								</div>
+								<div class="col-md-8">
+									<div class="demo-adaptive" data-ytb-video="JwjM6psiIrs"></div>
+								</div>
+							</div>
+
+							<style>
+								.demo-adaptive {
+									margin: 15px 0;
+								}
+							</style>
+
+							<script>
+								window.addEventListener("load", function () {
+
+									$('.demo-adaptive').youtubeVideo({
+										beforeInit: function(sets) {
+											// console.log( sets.title );
+										}
+									});
+
+								});
+							</script>
+
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="js/jquery.youtubevideo.js"></script>
+	<script src="js/demo.js"></script>
+		
+</div>
+<!---------------------------------------------------------------------------------------------------- SIGN AND SYMPTOMS -->
+<div data-role="page" id="sign" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2>Sign and Symptoms</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" >Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-transition="pop" data-rel="back">clock</a>
+	</div>  
+	
+
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+		<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<center><h1>This should not be ignored.</h1></center>
+		<script type="text/javascript"
+		src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+		<div class="jquery-script-clear"></div>
+		
+			<div class="youtube-video-container">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-sm-8 col-sm-push-2">
+
+							<div class="row">
+								<!-- <div class="col-md-6">
+									<div class="demo-adaptive" data-ytb-video="LLWiR9Ki8oDHZKt3TgfhJ-pw" data-ytb-options="{
+										type: 'playlist'
+									}"></div>
+								</div> -->
+								
+								<div class="col-md-6">
+									<div class="demo-adaptive" data-ytb-video="nnk70FNGVBs"></div>
+									<p>Do not ignore these symptoms.</p>
+								</div>
+								<br>
+								<p>Knowing how your breasts normally look and feel is an important part of breast health. 
+								Finding breast cancer as early as possible gives you a better chance of 
+								successful treatment. But knowing what to look for does not take the place of 
+								having regular mammograms and other screening tests. Screening tests can help find breast 
+								cancer in its early stages, before any symptoms appear.<br><br>The most common symptom of 
+								breast cancer is a new lump or mass. A painless, hard mass that has irregular edges is more 
+								likely to be cancer, but breast cancers can be tender, soft, or rounded. They can even be 
+								painful. For this reason, it is important to have any new breast mass, lump, or breast change 
+								checked by a health care professional experienced in diagnosing breast diseases.<br><br>
+								Other possible symptoms of breast cancer include:
+								<ul>
+									<li>Swelling of all or part of a breast (even if no distinct lump is felt)</li>
+									<li>Skin irritation or dimpling (sometimes looking like an orange peel)</li>
+									<li>Breast or nipple pain</li>
+									<li>Nipple retraction (turning inward)</li>
+									<li>Redness, scaliness, or thickening of the nipple or breast skin</li>
+									<li>Nipple discharge (other than breast milk)</li>
+									</ul><br><br>
+									Sometimes a breast cancer can spread to lymph nodes under the arm or around the 
+									collar bone and cause a lump or swelling there, even before the original tumor 
+									in the breast is large enough to be felt. Swollen lymph nodes should also be checked 
+									by a health care provider.<br><br>
+								
+								Although any of these symptoms can be caused by things other than breast cancer, 
+								if you have them, they should be reported to a health care professional so that the 
+								cause can be found.<br><br>
+
+								Because mammograms do not find every breast cancer, it is important for you to be 
+								aware of changes in your breasts and to know the signs and symptoms of breast cancer.<br><br></p>
+									
+
+							<style>
+								.demo-adaptive {
+									margin: 15px 0;
+								}
+							</style>
+
+							<script>
+								window.addEventListener("load", function () {
+
+									$('.demo-adaptive').youtubeVideo({
+										beforeInit: function(sets) {
+											// console.log( sets.title );
+										}
+									});
+
+								});
+							</script>
+
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="js/jquery.youtubevideo.js"></script>
+	<script src="js/demo.js"></script>
+		</div>
+</div>
+<!------------------------------------------------------------------------------------------------------------- GEO-LOCATION -->	
+
+<div data-role="page" id="geo" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2>Nearby hospitals and clinics</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" >Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back">back</a>
+	</div>  
+	
+
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+	<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<center><div id="mapid" style="width: 450px; height: 610px;"></div></center>
+<script>
+	if(navigator.geolocation == undefined){
+		 alert("Geolocation Undefined");
+		}
+		else{
+		/*alert("Geolocation available");*/
+		navigator.geolocation.getCurrentPosition(userLocation, locationError);
+			
+		function userLocation(position){
+			var latitude = position.coords.latitude;
+			var longitude = position.coords.longitude;
+			var locations = [
+			["Chisty Shifa Clinic",-20.1684583, 57.5045577],
+			["City Clinic",-20.162772, 57.5127563],
+			["Dr AG Jeetoo Hospital (Civil)",-20.1689922, 57.4999664],
+			["Volcy Pougnet Health Centre",-20.1704737, 57.5007382]		
+			];
+					var mymap = L.map('mapid').setView([latitude, longitude], 13);
+						L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+						maxZoom: 19,
+						attribution: 'Map data &copy;'+
+						'<a href="https://www.openstreetmap.org/">OpenStreetMap</a>'+
+						'contributors,<a href="https://creativecommons.org/licenses'+
+						'/by-sa/2.0/">CC-BY-SA</a>,Imagery © <a href="https://'+
+						'www.mapbox.com/">Mapbox</a>',
+						id: 'mapbox.streets'/*change view by using mapbox.streets or mapbox.satellite*/,
+						accessToken:'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYyc'+
+						'XBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+					}).addTo(mymap);
+					var markerA = L.marker([latitude, longitude]).addTo(mymap);
+						markerA.bindPopup("You are here").openPopup();
+					var marker = L.marker([latitude, longitude]).addTo(mymap); 					
+					for (var i = 0; i < locations.length; i++) {
+								marker = new L.marker([locations[i][1],locations[i][2]])
+									.bindPopup(locations[i][0])
+									.addTo(mymap);
+							}					
+						
+						
+			/*var circle = L.circle([latitude, longitude], {
+				color: 'red',
+				fillColor: '#f03',
+				fillOpacity: 0.5,
+				radius: 100
+				}).addTo(mymap);
+				circle.bindPopup("You may find the treasure around here");	*/		
+						
+		}
+		
+		function locationError(error){
+			switch(error.code){
+				case error.PERMISSION_DENIED:
+				alert("Permission Denied-"+error.message);
+				break;
+				
+				case error.POSITION_UNAVAILABLE:
+				alert("Position not available-"+ error.message);
+				break;
+				
+				case error.TIMEOUT:
+				alert("Request Time out-"+error.message);
+				break;		
+			}
+		}			
+	}
+		</script>		
+	</div>
+			<div data-role="footer">
+				<h2>Cancer App</h2>
+			</div>
+	</div>
+
+<!------------------------------------------------------------------------------------------------------------- TIMER -->
+<div data-role="page" id="timer" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2>Workout timer</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" >Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back" >back</a>
+	</div>  
+	
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+	<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		
+<div class="container">
+  <center>
+  <div class="row">
+    <table id="sessionCounterTbl">
+      <tr>
+        <td rowspan="2" style="font-weight:bold">
+          Session Time:
+        </td>
+        <td rowspan="2">
+          <button id="incrementSessionTime" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-u"><span class="glyphicon glyphicon-menu-up"></span></button>
+          <br/>
+          <button id="decrementSessionTime" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-d"><span id="decrementSessionTime" class="glyphicon glyphicon-menu-down"></span> </button>
+        </td>
+        <td>
+          <span id="sessionTimeInMinutes">1</span> <span id="sessionTimeLabel">minute</span>
+        </td> 
+        
+        <td>&nbsp; &nbsp;</td>
+        
+        
+           <td rowspan="2" style="font-weight:bold">
+          Break Time:
+        </td>
+        <td rowspan="2">
+          <button id="incrementBreakTime" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-u"><span  class="glyphicon glyphicon-menu-up"></span></button>
+          <br/>
+           <button id="decrementBreakTime" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-d"><span class="glyphicon glyphicon-menu-down"></span></button>
+        </td>
+        <td>
+          <span id="breakTimeInMinutes">
+  1
+      </span> <span id="breakTimeLabel">minute</span>
+
+
+        </td>
+      </tr>
+    </table>
+    </div>
+  <div class="row">
+    <table id="breakCounterTbl">
+      <tr>
+       
+      </tr>
+    </table>
+  </div>
+
+    <div id="timerUI">
+      <div id="timerNameLabel">
+        Session
+      </div>
+      <div id="timerLabel">
+        <span id="timer1Minutes">00</span>:<span id="timer1Seconds">00</span>
+      </div>
+      <canvas id="sessionCircle" width=350 height=350 >
+    </canvas>
+ 
+
+
+  </div>
+
+  <button id="startSessionBtn" class="btn">Start session</button>
+  <button id="pauseSessionBtn" class="btn">Pause session</button>
+
+    
+  <div>
+    Timer Status: 
+    <span id="timer1Status">Initialized</div>
+  </div>
+     </center>
+	 <script src="js/timer.js"></script>
+</div>
+			
+
+			<div data-role="footer">
+				<h2>Cancer App</h2>
+			</div> 
+</div>
+<!----------------------------------------------------------------------------------------------- WORKOUT VIDEOS -->
+<div data-role="page" id="wvideo" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2>Workout videos</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" >Menu</a>
+		<a href="#timer" data-icon="clock" data-iconpos="notext" data-transition="pop">clock</a>
+	</div>  
+	
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+	<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<h1>Check out these videos</h1><br><p>Click on the right top corner to workout on the timer.</p>
+		<script type="text/javascript"
+		src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+		<div class="jquery-script-clear"></div>
+		
+			<div class="youtube-video-container">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-sm-8 col-sm-push-2">
+
+							<div class="row">
+								<!-- <div class="col-md-6">
+									<div class="demo-adaptive" data-ytb-video="LLWiR9Ki8oDHZKt3TgfhJ-pw" data-ytb-options="{
+										type: 'playlist'
+									}"></div>
+								</div> -->
+								
+								<div class="col-md-6">
+									<div class="demo-adaptive" data-ytb-video="RO3GxTHa2Ts"></div>
+									<p>Strechs and easy movements that you can do at home.</p>
+								</div>
+								<br>
+								<div class="col-md-6">
+									<div class="demo-adaptive" data-ytb-video="mnO02bKMLkA"></div>
+									<p>Simple exercises that you can do at home.</p>
+								</div>
+								<br>
+								<div class="col-md-4">
+									<div class="demo-adaptive" data-ytb-video="xJRjU13i4J4"></div>
+									<p>Doctors instruction for a good exercise to cancer servivors</p>
+								</div>
+								<br>
+								<div class="col-md-4">
+									<div class="demo-adaptive" data-ytb-video="QX25kreB1Sk"></div>
+									<p>Five was to prevent breast cancer through workouts.</p>
+								</div>
+								<br>
+								<div class="col-md-4">
+									<div class="demo-adaptive" data-ytb-video="0U3ziyg-LlE"></div>
+									<p>Easy workout for women.</p>
+								</div>
+								<br>
+								<div class="col-md-4">
+									<div class="demo-adaptive" data-ytb-video="HFuJ7D4B19I"></div>
+									<p>Benefits of physiotherapy for breast cancer recovery.</p>
+								</div>
+								<br>
+								<div class="col-md-8">
+									<div class="demo-adaptive" data-ytb-video="8xK-Ld_2icw"></div>
+									<p>Home workout and streches.</p>
+								</div>
+								<br>
+								<div class="col-md-8">
+									<div class="demo-adaptive" data-ytb-video="_JPm2cwzAY8"></div>
+									<p>Doctor instruction for a good workout.</p>								
+								</div>
+								<br>
+
+							<style>
+								.demo-adaptive {
+									margin: 15px 0;
+								}
+							</style>
+
+							<script>
+								window.addEventListener("load", function () {
+
+									$('.demo-adaptive').youtubeVideo({
+										beforeInit: function(sets) {
+											// console.log( sets.title );
+										}
+									});
+
+								});
+							</script>
+
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="js/jquery.youtubevideo.js"></script>
+	<script src="js/demo.js"></script>
+		
+</div>
+</div>
+<!------------------------------------------------------------------------------------------------------------- REMINDER -->
+<div data-role="page" id="reminder" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2>Reminder</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" >Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back">back</a>
+	</div>  
+	
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+		<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<div class="mock-dialog">
+		  <form action="" name="reminder-form" id="reminder-form">
+			<div class="form-group">
+			  <label for="email-subject">Subject</label>
+			  <input name="subject" type="text" id="email-subject" class="form-control">
+			</div>
+			<div class="form-group">
+			  <label for="email-body">Message</label>
+			  <textarea name="body" id="email-body" class="form-control" rows="2"></textarea>
+			</div>
+			<p class="small text-muted">Add yor reminder.</p>
+			<div class="time-grid">
+			  <div class="form-group">
+				<label for="month-in-year">Month</label>
+				<select name="month" id="month-in-year" class="form-control">
+				  <option value="*">Every month</option>
+				  <option value="*/2">Every 2nd month</option>
+				  <option value="*/6">Every 6 months</option>
+				  <option value="1">January</option>
+				  <option value="2">February</option>
+				  <option value="3">March</option>
+				  <option value="4">April</option>
+				  <option value="5">May</option>
+				  <option value="6">June</option>
+				  <option value="7">July</option>
+				  <option value="8">August</option>
+				  <option value="9">September</option>
+				  <option value="10">October</option>
+				  <option value="11">November</option>
+				  <option value="12">December</option>
+				</select>
+			  </div>
+			  <div class="form-group">
+				<label for="day-in-month">Day in a month</label>
+				<select name="day" id="day-in-month" class="form-control">
+				  <option value="*">Every day</option>
+				  <option value="*/2">Every 2nd day</option>
+				  <option value="*/14">Every 14 days</option>
+				  <option value="1">1</option>
+				  <option value="2">2</option>
+				  <option value="3">3</option>
+				  <option value="4">4</option>
+				  <option value="5">5</option>
+				  <option value="6">6</option>
+				  <option value="7">7</option>
+				  <option value="8">8</option>
+				  <option value="9">9</option>
+				  <option value="10">10</option>
+				  <option value="11">11</option>
+				  <option value="12">12</option>
+				  <option value="13">13</option>
+				  <option value="14">14</option>
+				  <option value="15">15</option>
+				  <option value="16">16</option>
+				  <option value="17">17</option>
+				  <option value="18">18</option>
+				  <option value="19">19</option>
+				  <option value="20">20</option>
+				  <option value="21">21</option>
+				  <option value="22">22</option>
+				  <option value="23">23</option>
+				  <option value="24">24</option>
+				  <option value="25">25</option>
+				  <option value="26">26</option>
+				  <option value="27">27</option>
+				  <option value="28">28</option>
+				  <option value="29">29</option>
+				  <option value="30">30</option>
+				  <option value="31">31</option>
+				</select>
+			  </div>
+			  <div class="form-group">
+				<label for="weekday">Day in a week</label>
+				<select name="weekday" id="weekday" class="form-control">
+				  <option value="*">Every/any weekday</option>
+				  <option value="1">Monday</option>
+				  <option value="2">Tuesday</option>
+				  <option value="3">Wednesday</option>
+				  <option value="4">Thursday</option>
+				  <option value="5">Friday</option>
+				  <option value="6">Saturday</option>
+				  <option value="0">Sunday</option>
+				</select>
+			  </div>
+			  <div class="form-group">
+				<label for="hour">Hour</label>
+				<select name="hour" id="hour" class="form-control">
+				  <option value="*">Every hour</option>
+				  <option value="*/6">Every 6 hours</option>
+				  <option value="*/8">Every 8 hours</option>
+				  <option value="*/12">Every 12 hours</option>
+				  <option value="0">0 / Midnight</option>
+				  <option value="1">1 / 1am</option>
+				  <option value="2">2 / 2am</option>
+				  <option value="3">3 / 3am</option>
+				  <option value="4">4 / 4am</option>
+				  <option value="5">5 / 5am</option>
+				  <option value="6">6 / 6am</option>
+				  <option value="7">7 / 7am</option>
+				  <option value="8">8 / 8am</option>
+				  <option value="9">9 / 9am</option>
+				  <option value="10">10 / 10am</option>
+				  <option value="11">11 / 11am</option>
+				  <option value="12">12 / Noon</option>
+				  <option value="13">13 / 1pm</option>
+				  <option value="14">14 / 2pm</option>
+				  <option value="15">15 / 3pm</option>
+				  <option value="16">16 / 4pm</option>
+				  <option value="17">17 / 5pm</option>
+				  <option value="18">18 / 6pm</option>
+				  <option value="19">19 / 7pm</option>
+				  <option value="20">20 / 8pm</option>
+				  <option value="21">21 / 9pm</option>
+				  <option value="22">22 / 10pm</option>
+				  <option value="23">23 / 11pm</option>
+				  <option value="24">24 / 12pm</option>
+				</select>
+			  </div>
+			  <div class="form-group">
+				<label for="minute">Minute</label>
+				<input name="minute" type="number" id="minute" class="form-control" min="0" max="59" placeholder="0">
+			  </div>
+			  <div class="form-group">
+				<label for="preview-button" class"invisible">Generate dates for preview</label>
+				<input id="preview-button" class="btn btn-outline-primary form-control" type="button" value="Preview">
+			  </div>
+			</div>
+			<div id="preview-area"></div>
+			<hr>
+			<div>
+			  <button class="btn btn-outline-secondary" type="button">Cancel</button>
+			  <button class="btn btn-outline-success" type="button">Save</button>
+			</div>
+		  </form>
+		</div>
+		
+
+		<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div> 
+
+	</div>
+</div>
+
+<!----------------------------------------------------------------------------------------------------- BMI -->
+<div data-role="page" id="bmi" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2>BMI (Body Mass Index).</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" >Menu</a>
+		<a href="#pagetwo" data-icon="grid" data-iconpos="notext" >back</a>
+	</div>  
+	
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+		<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<center>
+			<p><h3 class="TXT">BMI is a tool.</h3></p>
+		</center>
+		
+			<center>
+
+				<p>BMI is a scale that can help determine if your weight is healthy in relation to your height. Your BMI is calculated by dividing your weight by the square of you height.
+					To find your BMI, simply use the chart below. Find your weight in pounds along the bottom and follow the chart to the spot where it meets your height in feet and inches. That number is your BMI.
+					For women and men, the following BMI ranges indicate your weight status:
+					</center>
+					<ul>
+					<li>18 or lower: underweight</li>
+					<li>18.5 to 24.9: normal, healthy weight</li>
+					<li>25 to 29.9: overweight</li>
+					<li>30 or higher: obese</li>
+					</ul>
+					</p>
+			
+		<center>
+			<p><h3>As BMI increases, so does your risk for major health problems.</h3></p>
+		</center>
+			
+		<center>
+			<p>If you have a higher BMI, you’re more likely to have health problems like heart disease, stroke, 
+			diabetes, gallbladder disease, sleep apnea and osteoarthritis. 
+			Obesity also has been linked to an increased risk of several cancers, 
+			including esophageal, pancreatic, colorectal, breast, endometrial and kidney cancer.</p>
+		</center>
+		
+		<center>
+			<p><h3>BMI does not tell the whole story.</h3></p>
+		</center>
+		<center>
+			<p>“It’s important to remember that BMI is just one factor in determining your overall health”.
+				BMI should be considered along with other factors like blood lipid levels and blood pressure to determine if you’re in good health.
+				A high BMI doesn’t always mean you’re overweight. In fact, those with a very muscular build often have a high BMI, but not a high percentage of body fat.</p>
+		</center>
+		
+		<center>
+			<p><h3>Talk to your doctor, if you have a high (or low) BMI.</h3></p>
+		</center>
+		<center>
+			<p>Because BMI is just one indicator of your health, it’s best to talk to your doctor if you have a BMI 
+				that is considered overweight or underweight.
+				Meeting with a professional can help you determine if you have underlying health problems. For example, 
+				sudden weight gain may be associated with thyroid problems. Sudden changes in weight, in some cases, 
+				can be a cancer symptom.
+				“Don’t just jump into a new diet. There are a lot of factors that go into weight,” Hedberg says. 
+				“Not just food.” 
+				A healthy lifestyle includes goals that include a healthy body weight, physical fitness and stress control. </p>
+		</center> 
+	</div>
+		<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div>
+</div>
+
+<!----------------------------------------------------------------------------------------------------- CALCULATE BMI -->
+<div data-role="page" id="pagetwo" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2>BMI (Body Mass Index).</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" >Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back" >back</a>
+	</div>  
+	
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+		
+		<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+
+		<center>
+			<p><h3 class="TXT">Calculate your BMI.</h3></p>
+		</center>
+		
+		<form method="post" onload="">
+
+			<input type="number" name="fnum" id="fnum" placeholder="Enter Your weight in kilograms."/>
+	
+			<input type="number" name="snum" id="snum" placeholder="Enter your height in centimeters."/>
+
+			<a href="#pageres" data-transition="slide" class="ui-btn ui-icon-search ui-btn-icon-left">calculate</a>	
+			<a href="#"  onClick="refresh()" class="ui-btn ui-icon-back ui-btn-icon-left">Refresh</a>	
+
+		</form>
+		<script> 
+	$(document).on("pagecreate","#pageres",function(){
+		var fn = parseInt(document.querySelector('#fnum').value);
+		var sn = parseInt(document.querySelector('#snum').value);
+		var result = (fn / (sn * sn)*10000);
+		var rouund_number=result.toFixed(2);
+
+
+			if(rouund_number > 0 && rouund_number < 18.5){
+				document.querySelector('#res').innerHTML = "You are UNDERWEIGHT.";
+				document.querySelector('#height').innerHTML = fn;
+				document.querySelector('#kilogram').innerHTML = sn;
+				document.querySelector('#resultx').innerHTML = rouund_number;
+				
+			}else
+				if(rouund_number > 18.5 && rouund_number < 25.9){
+					document.querySelector('#res').innerHTML = "You have a NORMAL WEIGHT.";
+					document.querySelector('#height').innerHTML = fn;
+					document.querySelector('#kilogram').innerHTML = sn;
+					document.querySelector('#resultx').innerHTML = rouund_number;
+				
+			}else
+				if(rouund_number > 25 && rouund_number < 29.9){
+					document.querySelector('#res').innerHTML = "You are OVERWEIGHT.";
+					document.querySelector('#height').value = fn;
+					document.querySelector('#kilogram').value = sn;
+					document.querySelector('#resultx').value = rouund_number;
+				
+			}else
+				if(rouund_number > 30){
+					document.querySelector('#res').innerHTML = "You have obesity.";
+					document.querySelector('#height').innerHTML = fn;
+					document.querySelector('#kilogram').innerHTML = sn;
+					document.querySelector('#resultx').innerHTML = rouund_number;
+				}
+			else
+				if(rouund_number < 0){
+					document.querySelector('#res').innerHTML = "Invalid Entry. Please try a valid data.";
+					document.querySelector('#height').innerHTML = "Invalid input";
+					document.querySelector('#kilogram').innerHTML = "Invalid input";
+					document.querySelector('#resultx').innerHTML = "Invalid input";
+				}else
+}); 
+//function to reload page
+function refresh(){
+location.reload(true);
+}
+</script>
+		</div>
+
+
+		<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div> 
+</div>
+<!------------------------------------------------------------------------------------------------------------- Result -->
+<div data-role="page" id="pageres" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2>Calculate BMI (Body Mass Index).</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" >Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back" >back</a>
+	</div>  
+	
+	
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+		
+		<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		
+		<center>
+			<p><h3 class="TXT">Result of your BMI.</h3></p>
+		</center>
+
+			<p>Your height in centimeters: </p>
+			<p id="height" class="input_txt"></p>
+			
+			<p>Your weight in kilograms:</p>
+			<p id="kilogram"></p>
+
+			<p>Your Body Mass Index is: </p>
+			<p id="resultx"></p>
+				
+			<p id="res"></p>	
+		
+		</div>
+
+	<div data-role="footer">
+		<h2>Cancer App</h2>
+	</div> 
+</div>
+
+<!----------------------------------------------------------------------------------------------------- CONTACT -->
+
+<div data-role="page" data-theme="a" id="add-form" >
+<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back" >back</a>
+    <form class="userform">
+
+        <center><h1 class="TXT">Form</h1></center>
+            <input type="text" name="name" id="name"  placeholder="Enter your name." data-clear-btn="true" data-mini="true">
+			
+            <input type="text" name="Address" id="add"  placeholder="Enter your address." data-clear-btn="true" data-mini="true">
+			
+            <input type="number" name="Phonenum" id="pn"  placeholder="Enter your phone number." data-clear-btn="true" data-mini="true">
+			
+			<label for="gender" class="ui-grid-a">Gender:</label>
+			<label for="gender">Male:</label>
+            <input type="radio" name="gender" id="male" value="Male" data-clear-btn="true" data-mini="true"><br>
+			
+			<label for="name">Female</label>
+            <input type="radio" name="gender" id="female" value="Female" data-clear-btn="true" data-mini="true"><br>
+			
+            <input type="number" name="Age" id="age" value="" placeholder="Age in dd/mm/yy" data-clear-btn="true" data-mini="true">
+			
+            <input type="text" name="Request" id="req" value="" placeholder="Request" data-clear-btn="true" data-mini="true" height="40px">
+
+            <div class="ui-grid-a">
+                <div class="ui-block-a"><a href="#"  class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini" data-rel="back">Cancel</a></div>
+                <div class="ui-block-b"><a href="#"  class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Submit</a></div>
+			</div>
+        </form>
+
+		<div data-role="footer">
+			<h2>Cancer App</h2>
+		</div>
+	
+	</div>
+	
+<!----------------------------------------------------------------------------------------------------- ABOUT US -->
+	<div data-role="page" id="aboutus" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<h2>About Us</h2>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" >Menu</a>
+		<a href="#" data-icon="delete" data-iconpos="notext" data-rel="back" >back</a>
+	</div>  
+	
+		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+
+			<ul data-role="listview">
+				<li><a href="#homepage" class="ui-btn ui-btn-icon-right ui-icon-home" id="slidepan">Home</a></li>
+                <li><a href="#selfexam" class="ui-btn ui-btn-icon-left ui-icon-eye" id="slidepan">Breast Self Examination</a></li>
+				<li><a href="#bmi" class="ui-btn ui-btn-icon-left ui-icon-grid" id="slidepan">BMI (Body Mass Index)</a></li>
+				<li><a href="#geo" class="ui-btn ui-btn-icon-left ui-icon-location" id="slidepan">Nearby hospitals and clinics</a></li>
+                <li><a href="#sign" class="ui-btn ui-btn-icon-left ui-icon-alert" id="slidepan">Sign and Symdrome</a></li>
+                <li><a href="#wvideo" class="ui-btn ui-btn-icon-left ui-icon-heart" id="slidepan">Sports Zone</a></li>
+                <li><a href="#food" class="ui-btn ui-btn-icon-left ui-icon-forbidden" id="slidepan">Cancer Preventing Foods</a></li>
+                <li><a href="#reminder" class="ui-btn ui-btn-icon-left ui-icon-calendar" id="slidepan">Add reminder</a></li>
+                <li><a href="#aboutus" class="ui-btn ui-btn-icon-left ui-icon-user" id="slidepan">About us</a></li>
+                <li><a href="#add-form" class="ui-btn ui-btn-icon-left ui-icon-phone" id="slidepan">Contact</a></li>
+			</ul>
+		</div>
+		<div role="main" class="ui-content jqm-content jqm-fullwidth" id="list">
+		<center><img src="image/aboutus.png" width="300" height="300"></center>
+		<center>
+			<h3>Who are We?</h3>
+		</center>
+		<p>
+		Breastcancer.org is a nonprofit organization founded in 2000 by breast oncologist Marisa C. Weiss, M.D. 
+		and born out of her conviction that people with breast cancer need more information and support than a doctor's visit can provide.
+		</p>
+		<p>
+		We are the leading patient-focused resource for breast health and breast cancer information and support. 
+		We engage, educate, and empower people with our expert information and dynamic peer support community to help them make the best decisions for their lives.
+		</p>
+		<p>
+		Since 2000, we have reached 134 million people worldwide. Breastcancer.org receives more than 20 million visits each year, 
+		and we host and manage the world’s largest online breast cancer peer community, with over 219,000 registered members.
+		</P>
+		<h4><i> Our Mission </I><p>
+		Our mission is to help women, men, 
+		and their loved ones make sense of the complex medical and personal information about breast health and breast cancer, 
+		so they can make the best decisions for their lives.
+		</P>
+		
+		</div>
+	</div>
+	
+</body>
+</html>

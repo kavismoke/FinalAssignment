@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmls = "https://www.w3.org/ns/widgets"
+		xmlns:gap = "https://phonegap.com/ns/1.0"
+		id= "com.js.calc"
+		versionCode = "1"
+		version = "1.0.0">
+
+<name>Breast Cancer Application</name>
+
+<description>A breast cancer app</description>
+
+<author> href="https://build.phonegap.com"
+email="bwt17bft@gmail.com"
+kavi boodhun</author>
+</widget>
